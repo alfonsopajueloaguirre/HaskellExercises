@@ -15,13 +15,7 @@ quickSort (x:xs) = menoresOrdenados ++ [x] ++ mayoresOrdenados
 --B) Dado un numero divisible y una lista de enteros divida ese numero por cada uno de los elementos ocntenido en la lista
 division::(Fractional a, Eq a)=>a->a->Maybe a
 division _ 0 = Nothing
-division n d = Just (n `div`d) --Just(n/d) Int
-
---divisiones n lista = divAux n lista []
-
---divAux::
---divAux::
---divAux::
+division n d = Just (n/d)
 
 --C)Mostrar todo un arbol
 data Arbol a = AV | Rama (Arbol a) a (Arbol a) deriving Show
