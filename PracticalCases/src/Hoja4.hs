@@ -64,7 +64,7 @@ instance Eq Fecha where
 mismaFecha::Fecha->Fecha->Bool
 mismaFecha f1 f2 = f1==f2
 
---H)
+--H)Ordenar las fechas mediante quicksort
 instance Ord Fecha where
     (Fecha x1 y1 z1) <= (Fecha x2 y2 z2) = if (z1 < z2) then True else if (z1 > z2) then False else if (y1 < y2) then True else if (y1 > y2) then False else if (x1 < x2) then True else if (x1 > x2) then False else True    
     (Fecha x1 y1 z1) > (Fecha x2 y2 z2) = if (z1 > z2) then True else if (z1 < z2) then False else if (y1 > y2) then True else if (y1 < y2) then False else if (x1 > x2) then True else if (x1 < x2) then False else False
